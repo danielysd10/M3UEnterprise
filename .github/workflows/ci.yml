@@ -43,7 +43,7 @@ jobs:
       - id: package
         run: python -B tools/package_release.py --output-dir "${{ runner.temp }}/m3u-release-${{ matrix.python-version }}"
       - run: python -B tools/verify_release.py --zip "${{ steps.package.outputs.release_zip }}" --sbom "${{ steps.package.outputs.release_sbom }}"
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: m3u-enterprise-verified-release-python-${{ matrix.python-version }}
           if-no-files-found: error
@@ -52,7 +52,7 @@ jobs:
             ${{ steps.package.outputs.release_sbom }}
       - name: Retain the result of each Python version
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: m3u-enterprise-tests-python-${{ matrix.python-version }}
           path: "${{ runner.temp }}/m3u-tests-${{ matrix.python-version }}.xml"
