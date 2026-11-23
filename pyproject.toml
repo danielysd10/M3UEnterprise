@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "m3u-enterprise-hardened"
+version = "9.0.16"
+description = "M3U Enterprise pipeline hardened for malformed input, isolated failures and resumable validation"
+requires-python = ">=3.13,<3.15"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest==9.2.0", "setuptools==84.2.1", "wheel==0.48.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools]
+py-modules = [
+  "run",
+  "FAVORITOS_CATALOGO_ENTERPRISE",
+  "M3U_PRO_V9_ENGINE",
+  "M3U_PRO_VALIDATOR",
+  "M3U_PRO_REPARADOR",
+  "UNIFICADOR_M3U_PRO_V9_0_0_ENTERPRISE",
+  "enterprise_favorites",
+  "url_safety",
+  "checkpoint_store",
+  "runtime_state",
+  "user_settings",
+  "network_runtime",
+  "runtime_profiles",
+  "metrics_store",
+  "channel_metadata",
+  "safe_http",
+  "prevalidation_manifest",
+]

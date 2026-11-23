@@ -1,0 +1,14 @@
+{
+  "schema": 2,
+  "epg_url": "https://epg.example.org/iptv/epg.xml",
+  "channels": [
+    {
+      "name": "Nombre oficial del canal",
+      "aliases": ["Nombre que aparece en la M3U"],
+      "tvg_id": "canal.example",
+      "epg_id": "canal.example",
+      "official_logo_url": "https://www.canal-oficial.example/assets/logo.png",
+      "official_logo_source": "https://www.canal-oficial.example/"
+    }
+  ]
+}

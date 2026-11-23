@@ -1,0 +1,23 @@
+# Local runtime and operational evidence
+.venv/
+.runtime/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+artifacts/
+validacion_checkpoint_*.sqlite3
+*.pyc
+*.tmp
+
+# Do not commit local endpoint lists, credentials or environment configuration.
+ListasUnificadas/
+*.m3u
+*.m3u8
+.env
+channel_metadata_registry.json
+
+# Canonical workspace private-data boundary. Only its README and redacted
+# inventory are versioned; playlists remain local because they can contain
+# provider endpoints, credentials or expiring tokens.
+/local-data/playlists/**
+!/local-data/README.md

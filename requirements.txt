@@ -1,0 +1,4 @@
+# M3U Enterprise Hardened has no mandatory third-party runtime dependencies.
+# Supported Python range: >=3.13,<3.15; standard library only.
+# Development/build tools (including transitive dependencies and hashes):
+# python -m pip install --require-hashes --only-binary=:all: -r requirements-dev.lock
